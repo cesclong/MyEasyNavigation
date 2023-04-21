@@ -20,6 +20,23 @@ android {
         }
     }
 
+    applicationVariants.all { variant ->
+        kotlin.sourceSets {
+            def name = variant.name
+            getByName(name) {
+                kotlin.srcDir("$buildDir/generated/ksp/$name/kotlin")
+            }
+        }
+    }
+//    libraryVariants.all { variant ->
+//        kotlin.sourceSets {
+//            def name = variant.name
+//            getByName(name) {
+//                kotlin.srcDir("$buildDir/generated/ksp/$name/kotlin")
+//            }
+//        }
+//    }
+
     buildTypes {
         release {
             minifyEnabled false
