@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "MyEasyNavigation"
 include ':app'
 include ':processor'
+include ':annotation'
